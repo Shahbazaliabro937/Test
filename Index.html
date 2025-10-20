@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JIN SMM Panel - #1 Social Media Marketing Services</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom Styles for Professional Look */
+        body {
+            /* Dark, Authentic Background Gradient */
+            background: linear-gradient(135deg, #121212 0%, #1a1a1a 50%, #121212 100%);
+            color: #e5e5e5; /* Light text on dark background */
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Ultra-Bold Glowing Title for Header */
+        .ultra-glowing-title {
+            background: linear-gradient(90deg, #10b981, #3b82f6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.8), 0 0 5px rgba(255, 255, 255, 0.5); 
+        }
+
+        /* Keyframes for the continuous scrolling text animation */
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Apply animation to the scrolling content container */
+        .scrolling-text {
+            animation: scroll 40s linear infinite;
+        }
+
+        /* Active Sidebar Link Style */
+        .sidebar-link.active {
+            background-color: #2563eb; /* Blue-600 */
+            box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- 1. FULL WIDTH HEADER (V3: Ultra-Bold & Premium) -->
+    <header class="bg-gray-900 border-b-8 border-yellow-500/80 shadow-2xl p-3 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto space-y-3">
+            
+            <!-- TOP ROW: BISMILLAH AND COMMISSION TAG -->
+            <div class="flex items-center justify-between">
+                <!-- Bismillah -->
+                <p class="text-xs sm:text-sm text-yellow-400 font-serif">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+                
+                <!-- Affiliate Tag -->
+                <div class="flex items-center space-x-1 bg-gray-700/50 px-3 py-1 rounded-full text-xs font-semibold border border-green-500/50">
+                    <i class="fas fa-hand-holding-usd text-green-400"></i>
+                    <span class="text-gray-200">Earn:</span> 
+                    <span class="text-yellow-400">10% Commission</span>
+                </div>
+            </div>
+
+            <!-- MIDDLE ROW: WELCOME MESSAGE & PRIMARY BUTTONS (Hidden on mobile to show hamburger menu) -->
+            <div class="hidden md:flex items-center justify-between space-x-8">
+                
+                <!-- Welcome Text -->
+                <div class="flex-shrink-0">
+                    <h1 class="text-3xl sm:text-4xl font-black tracking-tight whitespace-nowrap">
+                        <span class="ultra-glowing-title">Welcome To JIN SMM</span>
+                    </h1>
+                </div>
+
+                <!-- Primary Buttons -->
+                <div class="flex space-x-3 justify-end">
+                    <!-- WhatsApp Button -->
+                    <a href="YOUR_WHATSAPP_CHANNEL_LINK_HERE" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-extrabold py-2 px-4 rounded-xl text-sm transition duration-300 shadow-lg transform hover:scale-105 flex items-center justify-center space-x-2">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                        <span>WhatsApp Channel</span>
+                    </a>
+
+                    <!-- Add Fund Button -->
+                    <a href="#" onclick="renderPage('add-funds')" class="bg-blue-600 hover:bg-blue-700 text-white font-extrabold py-2 px-4 rounded-xl text-sm transition duration-300 shadow-lg transform hover:scale-105 flex items-center justify-center space-x-2">
+                        <i class="fas fa-wallet text-lg"></i>
+                        <span>Add Fund</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <div class="flex justify-between items-center md:hidden">
+                <h1 class="text-xl font-black"><span class="ultra-glowing-title">JIN SMM</span></h1>
+                <button id="mobile-menu-toggle" class="text-gray-200 p-2 rounded-lg hover:bg-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <nav id="mobile-menu-drawer" class="fixed top-0 left-0 w-64 h-full bg-gray-800 shadow-2xl z-50 transform -translate-x-full transition-transform duration-300 md:hidden">
+        <div class="p-4 border-b border-gray-700 flex justify-between items-center">
+            <span class="text-2xl font-bold text-teal-400">Navigation</span>
+            <button onclick="toggleMobileMenu()" class="text-gray-400 hover:text-white">&times;</button>
+        </div>
+        <div class="space-y-2 p-4 pt-6">
+            <a href="#" class="sidebar-link block p-3 rounded-xl transition duration-150 hover:bg-gray-700 active" data-page="dashboard"><i class="fas fa-plus-circle w-6"></i> New Order</a>
+            <a href="#" class="sidebar-link block p-3 rounded-xl transition duration-150 hover:bg-gray-700" data-page="orders"><i class="fas fa-history w-6"></i> Order History</a>
+            <a href="#" class="sidebar-link block p-3 rounded-xl transition duration-150 hover:bg-gray-700" data-page="add-funds"><i class="fas fa-wallet w-6"></i> Add Funds</a>
+            <a href="#" class="sidebar-link block p-3 rounded-xl transition duration-150 hover:bg-gray-700" data-page="support"><i class="fas fa-life-ring w-6"></i> Support</a>
+            <a href="#" class="sidebar-link block p-3 rounded-xl transition duration-150 hover:bg-gray-700" data-page="services"><i class="fas fa-list-ul w-6"></i> Services List</a>
+            <a href="YOUR_WHATSAPP_CHANNEL_LINK_HERE" target="_blank" class="block p-3 rounded-xl bg-green-600 text-white font-bold mt-4 text-center hover:bg-green-700"><i class="fab fa-whatsapp"></i> WhatsApp Channel</a>
+        </div>
+    </nav>
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden" onclick="toggleMobileMenu()"></div>
+
+    <div class="flex">
+        <!-- 2. SIDEBAR NAVIGATION (Desktop) -->
+        <nav class="hidden md:block w-64 bg-gray-800/80 border-r border-gray-700 min-h-[calc(100vh-80px)] p-4 sticky top-[108px] z-30">
+            <div class="space-y-2">
+                <a href="#" class="sidebar-link block p-3 rounded-xl transition duration-150 hover:bg-gray-700 active" data-page="dashboard"><i class="fas fa-plus-circle w-6"></i> New Order</a>
+                <a href="#" class="sidebar-link block p-3 rounded-xl transition duration-150 hover:bg-gray-700" data-page="orders"><i class="fas fa-history w-6"></i> Order History</a>
+                <a href="#" class="sidebar-link block p-3 rounded-xl transition duration-150 hover:bg-gray-700" data-page="add-funds"><i class="fas fa-wallet w-6"></i> Add Funds</a>
+                <a href="#" class="sidebar-link block p-3 rounded-xl transition duration-150 hover:bg-gray-700" data-page="support"><i class="fas fa-life-ring w-6"></i> Support</a>
+                <a href="#" class="sidebar-link block p-3 rounded-xl transition duration-150 hover:bg-gray-700" data-page="services"><i class="fas fa-list-ul w-6"></i> Services List</a>
+            </div>
+            
+            <div class="mt-8 pt-4 border-t border-gray-700/50">
+                <p class="text-sm text-gray-400 mb-2">Account</p>
+                <a href="#" class="sidebar-link block p-3 rounded-xl transition duration-150 hover:bg-gray-700" data-page="profile"><i class="fas fa-user-circle w-6"></i> Profile</a>
+                <a href="#" class="sidebar-link block p-3 rounded-xl transition duration-150 hover:bg-gray-700" data-page="logout"><i class="fas fa-sign-out-alt w-6"></i> Logout</a>
+            </div>
+        </nav>
+
+        <!-- 3. MAIN CONTENT AREA (SPA PAGES LOAD HERE) -->
+        <main id="app-content" class="flex-1 p-4 sm:p-8 max-w-full">
+            <!-- Default content is Dashboard (New Order) -->
+        </main>
+    </div>
+
+    <!-- 4. FLOATING WHATSAPP BUTTON (Har Page Par Dikhega) -->
+    <a 
+        href="YOUR_WHATSAPP_CHANNEL_LINK_HERE" 
+        target="_blank" 
+        class="fixed bottom-6 right-6 z-50 bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-2xl transition duration-300 transform hover:scale-110 pulse-float"
+        title="Join WhatsApp Channel"
+    >
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+    <style>
+        /* CSS for the Floating WhatsApp Button Animation */
+        @keyframes pulse-float {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7); } /* green-600 */
+            50% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(22, 163, 74, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+        }
+        .pulse-float {
+            animation: pulse-float 2s infinite ease-in-out;
+        }
+    </style>
+
+    <!-- 5. JAVASCRIPT LOGIC FOR SPA AND CONTENT (All Pages) -->
+    <script>
+        // --- PAGE CONTENT DEFINITIONS ---
+        // Saare pages ka HTML content yahan JavaScript variables mein store kiya gaya hai.
+
+        const pageContents = {
+            'dashboard': `
+                <div class="p-4 sm:p-8 space-y-8 max-w-4xl mx-auto">
+                    <!-- Section 1: Bismillah, Welcome, Buttons, Invite (YOUR CUSTOM HERO SECTION) -->
+                    <div class="space-y-6">
+                        <div class="text-center font-serif text-xl sm:text-2xl text-yellow-400 border-b border-yellow-400/30 pb-2">
+                            بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+                        </div>
+                        <div class="text-center space-y-3">
+                            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">
+                                <span class="ultra-glowing-title">Welcome To JIN SMM</span>
+                            </h1>
+                            <p class="text-gray-300 text-lg">
+                                Your trusted gateway to premium social media marketing services.
+                            </p>
+                        </div>
+                        
+                        <!-- Primary Action Buttons -->
+                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
+                            <a href="YOUR_WHATSAPP_CHANNEL_LINK_HERE" target="_blank" class="w-full sm:w-64 bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl shadow-lg transition-transform hover:scale-105 flex items-center justify-center text-lg space-x-2">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp Channel</span>
+                            </a>
+                            <a href="#" onclick="renderPage('add-funds')" class="w-full sm:w-64 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl shadow-lg transition-transform hover:scale-105 flex items-center justify-center text-lg space-x-2">
+                                <i class="fas fa-wallet"></i>
+                                <span>Add Fund Now!</span>
+                            </a>
+                        </div>
+                        
+                        <!-- Affiliate Section -->
+                        <div class="bg-gray-800/50 border border-teal-500/50 p-4 rounded-xl text-center shadow-xl">
+                            <p class="text-xl font-semibold text-teal-400 mb-2">
+                                <i class="fas fa-users mr-2"></i> Invite Friends & Earn!
+                            </p>
+                            <p class="text-gray-300 text-sm mb-4">
+                                Refer users and get a guaranteed 10% commission on every fund they add.
+                            </p>
+                            <button onclick="alert('Affiliate link copied!')" class="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-extrabold py-3 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.02] flex items-center justify-center text-lg">
+                                <i class="fas fa-hand-holding-usd mr-2"></i>
+                                <span>Invite Affiliate & Earn Money 🤑</span>
+                            </button>
+                        </div>
+                        
+                        <!-- Animated Scrolling Text -->
+                        <div class="overflow-hidden border border-red-500/50 rounded-lg bg-red-900/30 p-2">
+                            <div class="whitespace-nowrap scrolling-text text-xl font-bold text-yellow-300 tracking-wider">
+                                &nbsp;💰 10% LIFETIME COMMISSION &nbsp;🚀 PREMIUM & CHEAPEST SERVICES &nbsp;🔥 PAKISTAN'S NO.1 SMM PANEL &nbsp;🛡️ 24/7 DEDICATED SUPPORT &nbsp;✅ INSTANT START & RELIABLE! &nbsp;
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: New Order Form -->
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-2xl border-t-4 border-blue-500">
+                        <h2 class="text-2xl font-bold text-blue-400 mb-6 flex items-center"><i class="fas fa-shopping-cart mr-3"></i> New Order</h2>
+                        <form class="space-y-4">
+                            <div>
+                                <label for="category" class="block text-sm font-medium text-gray-400 mb-1">Service Category</label>
+                                <select id="category" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-white focus:ring-blue-500 focus:border-blue-500">
+                                    <option>TikTok Views - High Quality</option>
+                                    <option>Instagram Followers - Real & Fast</option>
+                                    <option>YouTube Subscribers - Guaranteed</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="service" class="block text-sm font-medium text-gray-400 mb-1">Service</label>
+                                <select id="service" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-white focus:ring-blue-500 focus:border-blue-500">
+                                    <option>TikTok Views | 10k/Day | HQ | $0.50/1K</option>
+                                    <option>TikTok Views | 50k/Day | HQ | $0.65/1K</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="link" class="block text-sm font-medium text-gray-400 mb-1">Link</label>
+                                <input type="url" id="link" placeholder="Paste your video/profile link here" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-white focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="quantity" class="block text-sm font-medium text-gray-400 mb-1">Quantity (Min 100 - Max 1,000,000)</label>
+                                <input type="number" id="quantity" value="1000" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-white focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div class="flex justify-between items-center bg-gray-700 p-3 rounded-lg border border-gray-600">
+                                <span class="text-gray-300 font-medium">Total Cost:</span>
+                                <span class="text-2xl font-bold text-teal-400">$0.50</span>
+                            </div>
+                            <button type="submit" class="w-full bg-teal-500 hover:bg-teal-600 text-gray-900 font-extrabold py-3 rounded-xl shadow-lg transition duration-300 transform hover:scale-[1.01]">
+                                Place Order <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            `,
+            'orders': `
+                <h2 class="text-3xl font-bold text-gray-100 mb-6 flex items-center"><i class="fas fa-history mr-3 text-yellow-500"></i> Order History</h2>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-2xl space-y-4">
+                    <p class="text-gray-400">Yahan aapke pichle orders ki detail hogi.</p>
+                    <table class="min-w-full divide-y divide-gray-700">
+                        <thead>
+                            <tr class="text-left text-xs font-semibold uppercase tracking-wider text-gray-400">
+                                <th class="py-3 px-2">ID</th>
+                                <th class="py-3 px-2">Service</th>
+                                <th class="py-3 px-2">Link</th>
+                                <th class="py-3 px-2">Qty</th>
+                                <th class="py-3 px-2">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-700 text-sm">
+                            <tr class="hover:bg-gray-700/50 transition">
+                                <td class="py-3 px-2 font-bold text-blue-400">#90123</td>
+                                <td class="py-3 px-2">TikTok Views</td>
+                                <td class="py-3 px-2 truncate max-w-[100px]">https://tiktok.com/vid...</td>
+                                <td class="py-3 px-2">10,000</td>
+                                <td class="py-3 px-2"><span class="px-2 py-1 text-xs font-semibold rounded-full bg-green-500/20 text-green-400">Completed</span></td>
+                            </tr>
+                            <tr class="hover:bg-gray-700/50 transition">
+                                <td class="py-3 px-2 font-bold text-blue-400">#90124</td>
+                                <td class="py-3 px-2">IG Followers</td>
+                                <td class="py-3 px-2 truncate max-w-[100px]">https://instagram.com/user...</td>
+                                <td class="py-3 px-2">500</td>
+                                <td class="py-3 px-2"><span class="px-2 py-1 text-xs font-semibold rounded-full bg-yellow-500/20 text-yellow-400">Pending</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-center mt-4">
+                         <button class="text-blue-400 hover:text-blue-300 font-semibold">Load More</button>
+                    </div>
+                </div>
+            `,
+            'add-funds': `
+                <h2 class="text-3xl font-bold text-gray-100 mb-6 flex items-center"><i class="fas fa-money-check-alt mr-3 text-green-500"></i> Add Funds / Payment</h2>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-2xl border-t-4 border-green-500">
+                    <p class="text-gray-300 mb-4">Choose your payment method below. Min deposit: $5.00</p>
+                    
+                    <div class="space-y-4">
+                        <!-- JazzCash/EasyPaisa (Example Local Payment) -->
+                        <div class="bg-gray-700 p-4 rounded-lg flex justify-between items-center hover:bg-gray-600 transition duration-150 cursor-pointer">
+                            <div>
+                                <h3 class="
