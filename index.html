@@ -1,0 +1,88 @@
+<!-- 
+    Yeh code woh section hai jismein Bismillah, Welcome message,
+    2 buttons aur animated scrolling text shamil hai.
+    Ise apni main template file mein paste karein.
+-->
+<style>
+    /* Keyframes for the continuous scrolling text animation */
+    @keyframes scroll {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+    }
+
+    /* Apply animation to the scrolling content container */
+    .scrolling-text {
+        animation: scroll 40s linear infinite; /* 40 seconds duration, continuous, infinite loop */
+    }
+
+    /* Style for the main glowing title */
+    .glowing-title-text {
+        /* Using a custom gradient color palette */
+        background: linear-gradient(45deg, #10b981, #06b6d4, #2563eb);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #fff; /* Fallback for browsers */
+        text-shadow: 0 0 10px rgba(6, 182, 212, 0.7); /* Subtle neon glow */
+    }
+</style>
+
+<div class="p-4 sm:p-8 space-y-8 max-w-4xl mx-auto">
+    
+    <!-- 1. Bismillah al-Rahman al-Rahim (Full Width) -->
+    <div class="text-center font-serif text-xl sm:text-2xl text-yellow-400 border-b border-yellow-400/30 pb-2">
+        بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+    </div>
+
+    <!-- 2. Welcome Message (JIN SMM) -->
+    <div class="text-center space-y-3">
+        <h1 class="glowing-title-text text-3xl sm:text-5xl font-extrabold tracking-tight">
+            Welcome To JIN SMM
+        </h1>
+        <p class="text-gray-300 text-lg">
+            Your trusted gateway to premium social media marketing services.
+        </p>
+    </div>
+
+    <!-- 3. Primary Action Buttons (WhatsApp & Add Fund) -->
+    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
+        
+        <!-- WhatsApp Channel Button -->
+        <a href="YOUR_WHATSAPP_CHANNEL_LINK_HERE" target="_blank" class="w-full sm:w-64 bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl shadow-lg transform transition-transform hover:scale-105 flex items-center justify-center text-lg space-x-2">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp Channel</span>
+        </a>
+
+        <!-- Add Fund Button -->
+        <a href="YOUR_ADD_FUND_LINK_HERE" class="w-full sm:w-64 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl shadow-lg transform transition-transform hover:scale-105 flex items-center justify-center text-lg space-x-2">
+            <i class="fas fa-wallet"></i>
+            <span>Add Fund Now!</span>
+        </a>
+    </div>
+
+    <!-- 4. Affiliate Section (Invite Friends) -->
+    <div class="bg-gray-800/50 border border-teal-500/50 p-4 rounded-xl text-center shadow-xl">
+        <p class="text-xl font-semibold text-teal-400 mb-2">
+            <i class="fas fa-users mr-2"></i> Invite Friends & Earn!
+        </p>
+        <p class="text-gray-300 text-sm mb-4">
+            Refer users and get a guaranteed 10% commission on every fund they add.
+        </p>
+        <!-- Affiliate Button -->
+        <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-extrabold py-3 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.02] flex items-center justify-center text-lg">
+            <i class="fas fa-hand-holding-usd mr-2"></i>
+            <span>Invite Affiliate & Earn Money 🤑</span>
+        </button>
+    </div>
+
+    <!-- 5. Animated Scrolling Text (GIF Effect) -->
+    <div class="overflow-hidden border border-red-500/50 rounded-lg bg-red-900/30 p-2">
+        <div class="whitespace-nowrap scrolling-text text-xl font-bold text-yellow-300 tracking-wider">
+            <!-- Professional Scrolling Content -->
+            &nbsp;💰 10% LIFETIME COMMISSION &nbsp;🚀 PREMIUM & CHEAPEST SERVICES &nbsp;🔥 PAKISTAN'S NO.1 SMM PANEL &nbsp;🛡️ 24/7 DEDICATED SUPPORT &nbsp;✅ INSTANT START & RELIABLE! &nbsp;
+        </div>
+    </div>
+
+</div>
+```eof
+
+Mujhe umeed hai ki yeh code ab load ho jaayega aur aapka desired design ismein shamil hoga. Agar phir bhi koi masla ho, to main aapki madad karne ke liye yahan hoon. Shukriya aapke sabr ke li
